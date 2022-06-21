@@ -49,7 +49,7 @@ def plot_text(X, texts, color_array=None, color_words=None, disable_warning=True
             y=alt.Y("x2", axis=None, scale=alt.Scale(zero=False)),
             tooltip=["text"],
         )
-        .properties(width=350, height=350, title="embedding space")
+        .properties(width=350, height=350, title="Document Embedding Space")
         .add_selection(brush)
     )
 
@@ -63,7 +63,7 @@ def plot_text(X, texts, color_array=None, color_words=None, disable_warning=True
                 tooltip=["text"],
                 color=alt.Color("color", sort=["none"] + color_words),
             )
-            .properties(width=350, height=350, title="embedding space")
+            .properties(width=350, height=350, title="Document Embedding Space")
             .add_selection(brush)
         )
 
@@ -75,7 +75,7 @@ def plot_text(X, texts, color_array=None, color_words=None, disable_warning=True
                 x=alt.X("x1", axis=None, scale=alt.Scale(zero=False)),
                 y=alt.Y("x2", axis=None, scale=alt.Scale(zero=False)),
                 tooltip=["text"],
-                color=alt.Color("Cluster"),
+                color=alt.Color("color"),
             )
             .properties(width=350, height=350, title="Document Embedding Space")
             .add_selection(brush)
