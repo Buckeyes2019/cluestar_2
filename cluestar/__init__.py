@@ -77,7 +77,7 @@ def plot_text(X, texts, color_array=None, color_words=None, disable_warning=True
                 tooltip=["text"],
                 color=alt.Color("color"),
             )
-            .properties(width=350, height=350, title="embedding space")
+            .properties(width=350, height=350, title="Document Embedding Space")
             .add_selection(brush)
         )
 
@@ -93,7 +93,7 @@ def plot_text(X, texts, color_array=None, color_words=None, disable_warning=True
         .transform_filter(brush)
         .transform_window(rank="rank(row_number)")
         .transform_filter(alt.datum.rank < 18)
-        .properties(title="text")
+        .properties(title="Text")
     )
 
     return (p1 | p2).configure_axis(grid=False).configure_view(strokeWidth=0)
