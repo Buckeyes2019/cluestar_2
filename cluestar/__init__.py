@@ -75,7 +75,7 @@ def plot_text(X, texts, color_array=None, color_words=None, disable_warning=True
                 x=alt.X("x1", axis=None, scale=alt.Scale(zero=False)),
                 y=alt.Y("x2", axis=None, scale=alt.Scale(zero=False)),
                 tooltip=["text"],
-                color=alt.Color("color"),
+                color=alt.Color("Cluster"),
             )
             .properties(width=350, height=350, title="Document Embedding Space")
             .add_selection(brush)
